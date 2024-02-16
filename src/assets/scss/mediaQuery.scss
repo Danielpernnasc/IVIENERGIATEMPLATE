@@ -1,0 +1,43 @@
+$mobile-breakpoint: 270px;
+$tablet-breakpoint: 768px;
+$Maxtablet-breakpoint: 880px;
+$desktop-breakpoint: 900px;
+
+.Mobile {
+    display: none;
+    @media screen and (min-width: $mobile-breakpoint) and  (max-width: $Maxtablet-breakpoint) {
+        display: block;
+      }
+}
+// .Mobile {
+//     display: none;
+//     @media screen and  (max-width: $Maxtablet-breakpoint ) {
+//         display: block;
+//       }
+// }
+.Desktop {
+    display: none;
+    @media screen and (min-width: $desktop-breakpoint){
+        display: block;
+    }
+
+}
+// // $tablet-breakpoint: 768px;
+
+// // .element {
+// //   display: block;
+  
+// //   @media screen and (max-width: $tablet-breakpoint) {
+// //     display: none;
+// //   }
+// // }
+// // @media (min-width: 768px) {
+// //     .Mobile {
+// //       display: block;
+// //     }
+// //   }
+//   @include media-breakpoint-up(md) {
+//     .Desktop {
+//       display: block;
+//     }
+//   }

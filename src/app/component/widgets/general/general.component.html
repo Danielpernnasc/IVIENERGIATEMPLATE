@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4 col-xl-2">
+            <app-common-currency [data]="bitcoinChart"></app-common-currency>
+        </div>
+        <div class="col-sm-4 col-xl-2">
+            <app-common-currency [data]="ethereumChart"></app-common-currency>
+        </div>
+        <div class="col-sm-4 col-xl-2">   
+            <app-common-currency [data]="leavetravelChart"></app-common-currency>    
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <app-common-avarage-ofday [data]="averagesaleChart"></app-common-avarage-ofday>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <app-common-avarage-ofday [data]="averageprofitChart"></app-common-avarage-ofday>
+        </div>
+        <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6">
+            <app-common-product-status-chartbox [data]="purchase"></app-common-product-status-chartbox>
+        </div>
+        <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6">
+            <app-common-product-status-chartbox [data]="sale"></app-common-product-status-chartbox>
+        </div>
+        <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6">
+            <app-common-product-status-chartbox [data]="salereturn"></app-common-product-status-chartbox>
+        </div>
+        <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6">
+            <app-common-product-status-chartbox [data]="purchaserate"></app-common-product-status-chartbox>
+        </div>
+        <div class="col-xxl-3 col-xl-4 col-md-6 box-col-6">
+            <app-courses></app-courses>
+        </div>
+        <div class="col-xxl-4 col-xl-5 col-md-6 box-col-6">
+            <app-total-users></app-total-users>
+        </div>
+        <div class="col-xxl-5 col-xl-3 col-md-12 box-col-12">
+            <app-visitors></app-visitors>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <app-common-socialmedia [data]="facebook"></app-common-socialmedia>    
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <app-common-socialmedia [data]="twitter"></app-common-socialmedia>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <app-common-socialmedia [data]="instagram"></app-common-socialmedia>
+        </div>
+        <div class="col-xl-3 col-sm-6">
+            <app-common-socialmedia [data]="youtube"></app-common-socialmedia>
+        </div>
+        <div class="col-xxl-5 col-xl-8 box-col-12">
+            <app-all-details></app-all-details>
+        </div>
+        <div class="col-xxl-3 col-xl-4 col-md-6 col-sm-12 box-col-6">
+            <app-balance></app-balance>
+        </div>
+        <div class="col-xl-4 d-xxl-block d-xl-none col-md-6 col-sm-12 box-col-6">
+            <app-widget-calander></app-widget-calander>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="card">
+    <div class="card-header card-no-border pb-0">
+        <h3>Horizontal Timeline </h3>
+        <p class="f-m-light mt-1">
+           Use the <code>.square-timeline</code> main class through create new variations of timeline.</p>
+    </div>
+    <div class="card-body">
+        <ul *ngFor="let allData of horizontialTimelineData" class="list-inline events timeline-list {{ allData.ulClass }} row">
+            <div *ngFor="let timeLineData of allData.data" class="{{ timeLineData.divClass }}">
+                <div>
+                    <div *ngIf="allData.id === 2" class="vertical-line"></div>
+                  <li class="list-inline-item event-list">
+                    <div class="px-4">
+                      <div class="event-date alert-light-{{ timeLineData.colorClass }} txt-{{ timeLineData.colorClass }}">{{ timeLineData.date }}</div>
+                      <h4 class=" f-w-700">{{ timeLineData.title }} </h4>
+                      <p class="text-muted">{{ timeLineData.desc }}</p>
+                      <div class="read-more-btn"><a class="btn btn-primary px-3" href="javascript:void(0)">Read more</a></div>
+                    </div>
+                  </li>
+                  <div *ngIf="allData.id === 1" class="vertical-line"></div>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>

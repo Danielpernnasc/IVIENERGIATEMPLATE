@@ -1,0 +1,15 @@
+<div class="card" *ngFor="let allData of basicProgressBarData">
+    <div class="card-header card-no-border pb-0">
+      <h3>{{ allData.header }}</h3>
+      <p class="f-m-light mt-1" [innerHTML]="allData.desc"></p>
+    </div>
+    <div class="card-body"> 
+      <div class="progress-showcase row">
+        <div class="col">
+          <div class="progress" *ngFor="let data of allData.data">
+            <div class="progress-bar bg-{{ data.colorClass }}" role="progressbar" [ngStyle]="{width : data.width }">{{ data.width }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

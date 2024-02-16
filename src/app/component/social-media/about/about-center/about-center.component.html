@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <h3>Pepole You May Know</h3>
+            </div>
+            <div class="card-body avatar-showcase">
+                <div class="pepole-knows">
+                    <ul>
+                        <li *ngFor="let data of addFriendsData">
+                            <app-common-add-friends [data]="data"></app-common-add-friends>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="card" *ngFor="let data of hobbiesAndInterestData">
+            <div class="card-header social-header" >
+                <h3>{{ data.heading }}<span class="pull-right"><i data-feather="more-vertical"></i></span></h3>
+            </div>
+            <app-common-hobbies-eduction [data]="data"></app-common-hobbies-eduction>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="card" *ngFor="let data of eductionData">
+            <div class="card-header social-header" >
+                <h3>{{ data.heading }}<span class="pull-right"><i data-feather="more-vertical"></i></span></h3>
+            </div>
+            <app-common-hobbies-eduction [data]="data"></app-common-hobbies-eduction>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header">
+                <h3>Viewed Your Profile</h3>
+            </div>
+            <div class="card-body avatar-showcase">
+                <div class="pepole-knows">
+                    <ul>
+                        <li *ngFor="let data of addFriendsData">
+                            <app-common-add-friends [data]="data"></app-common-add-friends>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <app-activity-log></app-activity-log>
+    </div>
+</div>

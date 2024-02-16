@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <ng-container *ngFor="let data of commonHelperData">
+                <app-common-helper-classes [data]="data"></app-common-helper-classes>
+            </ng-container>
+        </div>
+        <div class="col-12">
+            <ng-container *ngFor="let data of styleBorderData">
+                <app-common-helper-classes [data]="data"></app-common-helper-classes>
+            </ng-container>
+        </div>
+        <div class="col-12">
+            <ng-container *ngFor="let data of backgroundColorsData">
+                <app-common-helper-classes [data]="data"></app-common-helper-classes>
+            </ng-container>
+        </div>
+        <div class="col-12">
+            <app-border-colors></app-border-colors>
+        </div>
+        <div class="col-xl-6">
+            <app-image-sizing></app-image-sizing>
+        </div>
+        <div class="col-xl-6">
+            <app-font-style></app-font-style>
+        </div>
+        <div class="col-xl-6">
+            <ng-container *ngFor="let data of fontWeightData">
+                <app-common-text [data]="data"></app-common-text>
+            </ng-container>
+        </div>
+        <div class="col-xl-6">
+            <ng-container *ngFor="let data of textColorData">
+                <app-common-text [data]="data"></app-common-text>
+            </ng-container>
+        </div>
+        <div class="col-12">
+            <app-font-size></app-font-size>
+        </div>
+    </div>
+</div>

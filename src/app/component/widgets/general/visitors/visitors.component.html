@@ -1,0 +1,31 @@
+<div class="card visitor-card"> 
+    <div class="card-header card-no-border pb-0">
+      <div class="header-top">
+        <h3 class="m-0">Visitors<span class="f-14 font-primary f-w-600 ms-1">
+            <svg class="svg-fill me-1">
+              <use href="assets/svg/icon-sprite.svg#user-visitor"></use>
+            </svg>(+2.8)</span></h3>
+        <div class="card-header-right-icon">
+          <div class="dropdown icon-dropdown">
+            <button class="btn dropdown-toggle" id="visitorButton" type="button" (click)="openMenu()"><i class="icon-more-alt"></i></button>
+            <div class="dropdown-menu dropdown-menu-end" [class.show]="isOpen">
+              <a class="dropdown-item" href="javascript:void(0)">Today</a>
+              <a class="dropdown-item" href="javascript:void(0)">Tomorrow</a>
+              <a class="dropdown-item" href="javascript:void(0)">Yesterday</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body pt-0">
+      <div class="visitors-container">
+        <div id="visitor-chart">
+          <apx-chart [chart]="visitorsChart.chart" [dataLabels]="visitorsChart.dataLabels" [stroke]="visitorsChart.stroke" 
+          [labels]="visitorsChart.labels" [markers]="visitorsChart.markers" [xaxis]="visitorsChart.xaxis" [yaxis]="visitorsChart.yaxis" 
+          [grid]="visitorsChart.grid" [fill]="visitorsChart.fill" [colors]="visitorsChart.colors" [series]="visitorsChart.series" 
+          [responsive]="visitorsChart.responsive" [plotOptions]="visitorsChart.plotOptions" [legend]="visitorsChart.legend">
+      </apx-chart> 
+        </div>
+      </div>
+    </div>
+</div>

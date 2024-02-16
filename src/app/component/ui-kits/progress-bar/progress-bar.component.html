@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <app-simple-progressbar></app-simple-progressbar>
+            <div class="row">
+                <div class="col-xl-6">
+                    <ng-container *ngFor="let data of stripedData">
+                        <app-common-progress-bar [data]="data"></app-common-progress-bar>
+                    </ng-container>
+                </div>
+                <div class="col-xl-6">
+                    <ng-container *ngFor="let data of stripedAnimatedData">
+                        <app-common-progress-bar [data]="data"></app-common-progress-bar>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <app-multipal-progress-bar></app-multipal-progress-bar>
+                </div>
+                <div class="col-xl-6">
+                    <app-progress-number-stap></app-progress-number-stap>
+                </div>
+            </div>
+            <app-custom-progress-bar></app-custom-progress-bar>
+            <div class="row">
+                <div class="col-xl-6">
+                    <app-small-progress-bar></app-small-progress-bar>
+                </div>
+                <div class="col-xl-6">
+                    <app-large-progress-bar></app-large-progress-bar>
+                </div>
+            </div>
+            <app-custom-height-progressbar></app-custom-height-progressbar>
+        </div>
+    </div>
+</div>

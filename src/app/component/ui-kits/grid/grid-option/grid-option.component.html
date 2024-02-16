@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header card-no-border pb-0">
+        <h3>Grid Options</h3>
+        <p class="mt-1 f-m-light">
+          Bootstrap grid system allow all six breakpoints, and any breakpoints
+          you can customize.
+        </p>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive theme-scrollbar">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                      <th></th>
+                      <ng-container *ngFor="let data of gridOptionData">
+                        <th class="text-center f-w-700">{{ data.title }}<br><small>{{ data.size }}</small></th>
+                      </ng-container>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="text-nowrap" scope="row">Grid behavior</th>
+                        <td>Horizontal at all times</td>
+                        <td colspan="5">Collapsed to start, horizontal above breakpoints</td>
+                    </tr>
+                    <tr *ngFor="let allData of gridOptionData2">
+                        <th class="text-nowrap" scope="row">{{ allData.title }}</th>
+                        <ng-container *ngFor="let data of allData.data">
+                            <td [innerHTML]="data.text"></td>
+                        </ng-container>
+                    </tr>
+                      <tr *ngFor="let data of gridOptionData3">
+                        <th class="text-nowrap" scope="row">{{ data.title }}</th>
+                        <td colspan="6">{{ data.text }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

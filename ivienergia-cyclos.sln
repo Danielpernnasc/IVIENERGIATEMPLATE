@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ivienergia-cyclos.Web", "ivienergia-cyclos.Web.esproj", "{52FE899F-9869-4C2E-ACB5-9E8C02F5D284}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52FE899F-9869-4C2E-ACB5-9E8C02F5D284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52FE899F-9869-4C2E-ACB5-9E8C02F5D284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52FE899F-9869-4C2E-ACB5-9E8C02F5D284}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{52FE899F-9869-4C2E-ACB5-9E8C02F5D284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52FE899F-9869-4C2E-ACB5-9E8C02F5D284}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52FE899F-9869-4C2E-ACB5-9E8C02F5D284}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E60DF067-E1A6-480F-BC16-14E8561D0BA4}
+	EndGlobalSection
+EndGlobal

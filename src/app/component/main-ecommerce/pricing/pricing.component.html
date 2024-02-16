@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row"></div>
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header card-no-border pb-0"> 
+                <h3>Become member</h3>
+            </div>
+            <div class="card-body pricing-block">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 box-col-3" *ngFor="let data of becomememberData">
+                        <app-common-become-member [data]="data"></app-common-become-member>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="card">
+            <div class="card-header card-no-border pb-0"> 
+                <h3>Simple Pricing Card</h3>
+            </div>
+            <div class="card-body pricing-block">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 box-col-3" *ngFor="let data of simplepricingcardData">
+                        <app-common-simple-pricing-card [data]="data"></app-common-simple-pricing-card>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>

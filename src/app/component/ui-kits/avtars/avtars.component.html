@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="user-profile">
+        <div class="row">
+            <div class="col-xl-4 col-md-6">
+                <ng-container *ngFor="let data of sizingData">
+                    <app-common-avatars [data]="data"></app-common-avatars>
+                </ng-container>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <ng-container *ngFor="let data of statusIndicatorData">
+                    <app-common-avatars [data]="data"></app-common-avatars>
+                </ng-container>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <ng-container *ngFor="let data of shapeData">
+                    <app-common-avatars [data]="data"></app-common-avatars>
+                </ng-container>
+            </div>
+            <div class="col-md-6">
+                <ng-container *ngFor="let data of ratioData">
+                    <app-common-avatars [data]="data"></app-common-avatars>
+                </ng-container>
+            </div>
+            <div class="col-xl-6">
+                <app-group></app-group>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="card height-equal">
+    <div class="card-header card-no-border pb-0">
+        <h3>{{ data.title }}</h3>
+        <p class="f-m-light mt-1">
+            <ng-container *ngIf="data.id === 1">
+                Use the <code>.switch-state </code>and <code>icon-state </code>through defined icons switches.
+            </ng-container>
+            <ng-container *ngIf="data.id === 2">
+                Use the <code>.bg-*</code> class through created default switches. 
+            </ng-container>
+            <ng-container *ngIf="data.id === 3">
+                Use the <code>.switch-outline </code>and <code>.icon-state</code> class through created outline and icons. 
+            </ng-container>
+        </p>
+      </div>
+      <div class="card-body common-flex flex-column switch-wrapper">  
+        <div class="d-flex" *ngFor="let text of data.data">
+            <div class="{{ data.class }}">
+              <label class="switch mb-0">
+                <input type="checkbox" checked=""><span class="switch-state bg-{{ text.color }}"></span>
+              </label>
+            </div>
+            <label class="col-form-label m-l-10">{{ text.text }}</label>
+          </div>
+      </div>
+</div>

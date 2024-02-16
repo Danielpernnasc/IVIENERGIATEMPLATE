@@ -1,0 +1,17 @@
+@import '../../../../assets/scss/utils/_variables.scss';
+@import '../../../../assets/scss/font_iviEnergia.scss';
+
+.DataPresente{
+    color: #dcdcd8 !important;
+    span{
+        font-family: $fontDestaque;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    margin-left: 10px;
+    text-align: center;
+}
+
+.centralVertical{
+    padding: 10px;
+}

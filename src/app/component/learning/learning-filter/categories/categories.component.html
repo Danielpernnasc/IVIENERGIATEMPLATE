@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card-header card-no-border pb-0">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-bs-toggle="collapse" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed">Categories</button>
+      </h5>
+    </div>
+    <div class="collapse card-body px-0 show" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed"  >
+        <ng-container *ngFor="let allData of Categories">
+            <div class="categories" [class.pt-0]="allData.padding == true">
+                <div class="learning-header"><span class="f-w-700">{{ allData.title }}</span></div>
+                <ul>
+                  <li *ngFor="let data of allData.designer">
+                    <a href="#">{{ data.designerTitle }} </a><span class="badge badge-primary pull-right">{{ data.count }}</span></li>
+                </ul>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-header card-no-border pb-0">
+        <h3>Grid For Column</h3>
+        <p class="mt-1 f-m-light">You may use predefined grid classes. Using <code>.col-md-*</code>you can set the grid system.</p>
+    </div>
+    <div class="card-body grid-showcase">
+        <div class="row">
+            <div *ngFor="let data of gridColumnData" class="col-md-{{ data.size }} text-center"><span>{{ data.text }}</span></div>
+        </div>
+    </div>
+</div>

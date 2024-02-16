@@ -1,0 +1,104 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-3 xl-40 box-col-4e">
+            <app-job-filter></app-job-filter>
+        </div>
+        <div class="col-xl-9 xl-60 box-col-8">
+            <div class="card">
+                <div class="job-search">
+                    <div class="card-body">
+                        <div class="d-flex"><img class="img-40 img-fluid m-r-20" src="assets/images/job-search/1.jpg"
+                                alt="">
+                            <div class="flex-grow-1">
+                                <h4 class="f-w-700"><a href="#">Product Designer (UI/UX Designer)</a><span
+                                        class="pull-right">
+                                        <button class="btn btn-primary" type="button">Apply</button></span></h4>
+                                <p>Boho - United States<span><i class="fa fa-star font-warning"></i><i
+                                            class="fa fa-star font-warning"></i><i
+                                            class="fa fa-star font-warning"></i><i
+                                            class="fa fa-star font-warning"></i><i
+                                            class="fa fa-star font-warning"></i></span></p>
+                            </div>
+                        </div>
+                        <div class="job-description" *ngFor="let allData of jobDetail">
+                            <h4>{{ allData.title }}</h4>
+                            <ul *ngIf="allData.liClass === true; else desctiptionData">
+                                <li *ngFor="let data of allData.data"> {{ data.desctiption }}</li>
+                            </ul>
+                            <ng-template #desctiptionData>
+                                <p *ngFor="let data of allData.data">{{ data.desctiption }}</p>
+                            </ng-template>
+                        </div>
+                        <div class="job-description">
+                            <button class="btn btn-primary" type="button" style="margin-right: 4px;"><span><i
+                                        class="fa fa-check"></i></span> Save this job</button>
+                            <button class="btn btn-primary" type="button"><span><i class="fa fa-share-alt"></i></span>
+                                Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-faq">
+                <h3 class="mb-0">Similar jobs</h3>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 xl-100" *ngFor="let data of jobCardsData | slice:0:4">
+                    <div class="card" [class.ribbon-vertical-left-wrapper]="data.ribbion == true">
+                        <div *ngIf="data.ribbion === true"
+                            class="ribbon ribbon-bookmark ribbon-vertical-left ribbon-secondary">
+                            <i class="icofont icofont-love"></i>
+                        </div>
+                        <div class="job-search">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <img class="img-40 img-fluid m-r-20" src="{{ data.image }}" alt="">
+                                    <div class="flex-grow-1">
+                                        <h4>
+                                            <a href="javascript:void(0)">{{ data.title }}</a>
+                                            <span *ngIf="data.tag === true"
+                                                class="badge badge-{{ data.tagColor }} pull-right">{{ data.tagTitle
+                                                }}</span>
+                                            <span *ngIf="data.time === true" class="pull-right">{{ data.timeText
+                                                }}</span>
+                                        </h4>
+                                        <p>{{ data.subTitle }}
+                                            <span>
+                                                <ngb-rating class="font-warning" [rate]="data.rating"></ngb-rating>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>{{ data.desc }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="job-search">
+                            <div class="card-body">
+                                <div class="d-flex"><img class="img-40 img-fluid m-r-20"
+                                        src="assets/images/job-search/3.jpg" alt="">
+                                    <div class="flex-grow-1">
+                                        <h4 class="f-w-700"><a href="#">Senior UX designer</a><span class="pull-right">5
+                                                days ago</span></h4>
+                                        <p>Sutherland <span>Lelystad, Netherlands </span><span><i
+                                                    class="fa fa-star font-warning"></i><i
+                                                    class="fa fa-star font-warning"></i><i
+                                                    class="fa fa-star font-warning"></i><i
+                                                    class="fa fa-star font-warning-half-o"></i><i
+                                                    class="fa fa-star font-warning-o"></i></span></p>
+                                    </div>
+                                </div>
+                                <p>Woody equal ask saw sir weeks aware decay. Entrance prospect removing we packages
+                                    strictly is no smallest he. For hopes may chief get hours day rooms. Oh no turned
+                                    behind polite piqued enough at. Forbade few through inquiry blushes you. Cousin no
+                                    itself eldest it in dinner latter missed no.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

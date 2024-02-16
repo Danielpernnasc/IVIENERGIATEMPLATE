@@ -1,0 +1,13 @@
+<div class="modal-body bodyIvi" >
+    <div class="modal-toggle-wrapper textAlign ">
+        <div class="colorBlack">
+                <h1>Messagem</h1>
+        </div>
+      <h3 [ngClass]="{'error': mensagemErro}">{{ mensagem }}</h3>
+      <p *ngIf="alerta" class="alert">{{ alerta }}</p> 
+      <button class="btnBlack  align-items-center"  type="button" (click)="close()">Fechar
+        <app-feather-icons [icon]="'arrow-close'"></app-feather-icons>
+      </button>
+    </div>
+  </div>
+  

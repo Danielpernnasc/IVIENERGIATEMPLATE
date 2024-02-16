@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <ng-container *ngFor="let data of hoverData">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header card-no-border pb-0">
+                        <h3>Hover Effect <span class="f-w-700">{{ data.hoverDigits }}</span></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row my-gallery gallery" id="aniimated-thumbnials" itemscope="">
+                            <figure class="col-md-3 col-6 img-hover {{ data.hoverClass }}" style="margin-bottom: 30px;" *ngFor="let img of imgData" >
+                                <a href="javascript:void(0)" itemprop="contentUrl">
+                                    <div style="overflow: hidden;">
+                                        <img [src]="img.srcUrl"/>
+                                    </div>
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

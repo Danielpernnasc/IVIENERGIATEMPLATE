@@ -1,0 +1,42 @@
+trigger:
+- develop
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: build_and_deploy_job
+  displayName: Build and Deploy Job
+  pool:
+    vmImage: ubuntu-latest
+    parallel: 1
+
+  steps:
+  - checkout: self
+    submodules: true
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+      checkLatest: true
+      addToPath: true
+
+  - script: |
+      npm install -g @angular/cli
+      npm install
+      npm run build:dev
+    displayName: 'Install dependencies and build'
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Build.SourcesDirectory)'
+      contents: |
+        src/*
+        dist/ivienergia-cyclos-web/**
+      targetFolder: '$(Build.ArtifactStagingDirectory)'
+    displayName: 'Copy project files'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'ivienergia-cyclos-web'

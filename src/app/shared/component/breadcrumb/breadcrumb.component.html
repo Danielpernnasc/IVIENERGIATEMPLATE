@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-3"> 
+                <h3>{{ title }}</h3>
+            </div>
+            <div class="col-5 paddingZero"> 
+                <h3>{{ subtitulo }}</h3>
+            </div>
+            <div class="col-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a [routerLink]="'home-ivienergia/menu/PreProjeto'">
+                        <img [src]="iconHome">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item" *ngIf="breadcrumbs?.parentBreadcrumb">{{breadcrumbs.parentBreadcrumb}}</li>
+                    <li class="breadcrumb-item active" *ngIf="breadcrumbs.childBreadcrumb">{{breadcrumbs.childBreadcrumb}}</li>
+                </ol>
+            </div>
+        </div>        
+    </div>
+</div>
+

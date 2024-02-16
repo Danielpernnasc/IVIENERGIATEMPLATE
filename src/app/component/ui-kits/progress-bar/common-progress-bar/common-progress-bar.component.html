@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header card-no-border pb-0">
+        <h3>{{ data.header }}</h3>
+        <p class="f-m-light mt-1" [innerHTML]="data.desc"></p>
+    </div>
+    <div class="card-body">
+        <div class="progress-showcase row ">
+            <div class="col">
+                <div class="progress" *ngFor="let progressData of data.data">
+                    <div class="{{ data.class }}-{{ progressData.colorClass }}" role="progressbar" [ngStyle]="{ width : progressData.width }"></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>

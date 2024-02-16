@@ -1,0 +1,33 @@
+.content-container {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 25px;
+  width: 250px;
+  margin-left: -15px;
+  background: #918d8d;
+  position: fixed;
+  z-index: 100;
+  opacity: 5;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  top: 53px;
+  ul, li, a {
+    margin-left: 10px;
+    padding: 10px 0;
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+    
+
+  }
+}
+
+.content-container-visible {
+  transform: translateX(0);
+  opacity: 1; /* Mantenha a opacidade como 1 quando visível */
+}
+
+.content-container-hidden {
+  transform: translateX(-100%);
+  opacity: 0; /* Torne o conteúdo transparente quando oculto */
+}
+

@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-xl-12">
+        <div class="md-sidebar">
+            <div class="md-sidebar-aside job-left-aside custom-scrollbar">
+                <div class="email-left-aside">
+                    <div class="card_" *ngFor="let titulo of tituloFilas">
+                        <div class="card_-body" >
+                            <ul class="nav main-menu" role="tablist">
+                                <li class="nav-item"><span class="f-w-700 main-title"> {{titulo}}</span></li>
+                            </ul>
+                            <div class="email-app-sidebar left-bookmark task-sidebar">
+                                <ul class="nav main-menu" role="tablist" *ngFor="let propriedade of listas" >
+                                    <li class="nav-item"><span class="title"> {{ propriedade }} </span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,15 @@
+<div class="row">
+    <div *ngFor="let data of data" class="col-xl-4 box-col-4 {{ data.colClass }}">
+        <div class="card bg-subheader">
+          <div class="card-body">
+            <div class="d-flex faq-widgets">
+              <div class="flex-grow-1">
+                <h3>{{ data.title }}</h3>
+                <p>{{ data.desc }}</p>
+              </div>
+              <app-feather-icons [icon]="data.icon"></app-feather-icons>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

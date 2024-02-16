@@ -1,0 +1,94 @@
+<div class="row justify-content-end">
+
+    <div class="col-4">
+        <ul class="sidebar-body-menu">
+ 
+            <ng-container *ngFor="let menu of menus">
+                <li>
+                    <!-- <div *ngIf="menu.link1">
+                        <a [routerLink]="menu.path">
+                            <h3>{{menu.link1}}</h3>
+                        </a>
+                       
+                    </div>
+                    <div *ngIf="menu.link2">
+                        <a [routerLink]="menu.path">
+                            <h3>{{menu.link2}}</h3>
+                        </a>
+                    </div>
+                    <div *ngIf="menu.link3">
+                        <a [routerLink]="menu.path">
+                            <h3>{{menu.link3}}</h3>
+                        </a>
+                    </div> -->
+                    <div *ngIf="menu.link3"></div>
+                    <div *ngIf="menu.link4">
+                        <h4>{{menu.link4}}</h4>
+                        <ul class="sidebar-body-mainmenu custom-scrollbar">
+                            <div *ngTemplateOutlet="recursiveMenu; context: { $implicit: menu.items }"></div>
+                            <ng-template #recursiveMenu let-menu>
+                                <ng-container *ngFor="let item of menu">
+                                    <li>
+                                      <ng-template #simple>
+                                        <a [routerLink]="item.path">
+                                            {{ item.title | translate }}
+                                        </a>
+                                      </ng-template>
+                                        <a *ngIf="item.type == 'extTabLink'; else simple" href="{{ item.path }}" target="_blank"> {{ item.title | translate }} </a>
+                                        <span class="sub-body-arrow"><i class="fa fa-angle-right" *ngIf="item.children"></i></span>
+                                        <ul class="sidebar-body-submenu custom-scrollbar" *ngIf="item.children">
+                                            <ng-container
+                                                *ngTemplateOutlet="recursiveMenu; context: { $implicit: item.children }">
+                                            </ng-container>
+                                        </ul>
+                                    </li>
+                                </ng-container>
+                            </ng-template>
+                        </ul>
+                    </div>
+                    <!-- <div *ngIf="menu.link5">
+                        <a [routerLink]="menu.path">
+                            <h3>{{menu.link5}}</h3>
+                        </a>
+                    </div> -->
+                  
+                </li>
+            </ng-container>
+            <!-- <ng-container *ngFor="let menu of menus">
+                <li>
+                    <div *ngIf="menu.headTitle1 && menu.headTitle2">
+                        <h3 class="lan-1">{{menu.headTitle1 | translate}}</h3><span class="lan-2">{{menu.headTitle2 | translate}}</span>
+                    </div>
+                    <ul class="sidebar-body-mainmenu custom-scrollbar">
+                        <div *ngTemplateOutlet="recursiveMenu; context: { $implicit: menu.items }"></div>
+                        <ng-template #recursiveMenu let-menu>
+                            <ng-container *ngFor="let item of menu">
+                                <li>
+                                  <ng-template #simple>
+                                    <a [routerLink]="item.path">
+                                        <app-svg-icon *ngIf="item.icon" [icon]="item.icon"></app-svg-icon>
+                                        {{ item.title | translate }}
+                                    </a>
+                                  </ng-template>
+                                    <a *ngIf="item.type == 'extTabLink'; else simple" href="{{ item.path }}" target="_blank"> {{ item.title | translate }} </a>
+                                    <span class="sub-body-arrow"><i class="fa fa-angle-right" *ngIf="item.children"></i></span>
+                                    <ul class="sidebar-body-submenu custom-scrollbar" *ngIf="item.children">
+                                        <ng-container
+                                            *ngTemplateOutlet="recursiveMenu; context: { $implicit: item.children }"></ng-container>
+                                    </ul>
+                                </li>
+                            </ng-container>
+                        </ng-template>
+                    </ul>
+                </li>
+            </ng-container> -->
+        </ul>
+    </div>
+    <div class="col-4">
+        <app-breadcrumb></app-breadcrumb>
+    </div>
+</div>
+<!-- <div class="container">
+</div> -->
+
+

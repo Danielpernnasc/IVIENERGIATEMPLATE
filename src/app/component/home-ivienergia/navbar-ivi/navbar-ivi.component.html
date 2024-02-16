@@ -1,0 +1,9 @@
+<!-- sidenav.component.html -->
+<mat-sidenav [opened]="isSidenavOpen">
+  <div class="content-container" [ngClass]="{'content-container-visible': isSidenavOpen, 'content-container-hidden': !isSidenavOpen}">
+    <ul>
+      <li><a [routerLink]="'home-ivienergia/menu/PreProjeto'">Pré Projeto</a></li>
+      <li><a href="#">Pré Projeto por Lote</a></li>
+    </ul>
+  </div>
+</mat-sidenav>

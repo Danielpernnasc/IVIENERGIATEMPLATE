@@ -1,0 +1,18 @@
+<div class="card height-equal">
+    <div class="card-header card-no-border pb-0">
+        <h3 class="mb-0">{{ data.title }}</h3>
+        <p class="mb-0 mt-1" [innerHTML]="data.desc"></p>
+    </div>
+    <div class="card-body">
+        <div class="avatar-showcase">
+            <div class="avatars">
+                <div class="{{ data.class }}" *ngFor="let img of data.data" >
+                    <img class="{{ img.imgClass }}" src="{{ img.img }}" alt="#">
+                    <ng-container *ngIf="img.status">
+                        <div class="status status-{{ img.status }}"></div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

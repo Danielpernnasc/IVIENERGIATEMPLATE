@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+      <div class="header-top">
+        <h3>Order Status</h3>
+        <div class="card-header-right-icon">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown">Today</button>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"><a class="dropdown-item" href="javascript:void(0)">Today</a><a class="dropdown-item" href="javascript:void(0)">Tomorrow</a><a class="dropdown-item" href="javascript:void(0)">Yesterday</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="chart-container progress-chart">
+        <div id="progress1">
+            <apx-chart [series]="packedOrderChart.series" [chart]="packedOrderChart.chart" [dataLabels]="packedOrderChart.dataLabels"
+                [stroke]="packedOrderChart.stroke" [fill]="packedOrderChart.fill" [colors]="packedOrderChart.colors"
+                [labels]="packedOrderChart.labels" [markers]="packedOrderChart.markers" [yaxis]="packedOrderChart.yaxis"
+                [xaxis]="packedOrderChart.xaxis" [plotOptions]="packedOrderChart.plotOptions" [title]="packedOrderChart.title" [subtitle]="packedOrderChart.subtitle"> 
+          </apx-chart>
+        </div>
+        <div id="progress2">
+            <apx-chart [series]="dispatchedChart.series" [chart]="dispatchedChart.chart" [dataLabels]="dispatchedChart.dataLabels"
+                [stroke]="dispatchedChart.stroke" [fill]="dispatchedChart.fill" [colors]="dispatchedChart.colors"
+                [labels]="dispatchedChart.labels" [markers]="dispatchedChart.markers" [yaxis]="dispatchedChart.yaxis"
+                [xaxis]="dispatchedChart.xaxis" [plotOptions]="dispatchedChart.plotOptions" [title]="dispatchedChart.title" [subtitle]="dispatchedChart.subtitle">
+          </apx-chart>
+        </div>
+        <div id="progress3">
+            <apx-chart [series]="reachStationChart.series" [chart]="reachStationChart.chart" [dataLabels]="reachStationChart.dataLabels"
+                [stroke]="reachStationChart.stroke" [fill]="reachStationChart.fill" [colors]="reachStationChart.colors"
+                [labels]="reachStationChart.labels" [markers]="reachStationChart.markers" [yaxis]="reachStationChart.yaxis"
+                [xaxis]="reachStationChart.xaxis" [plotOptions]="reachStationChart.plotOptions" [title]="reachStationChart.title" [subtitle]="reachStationChart.subtitle">
+          </apx-chart>
+        </div>
+        <div id="progress4">
+            <apx-chart [series]="outdeliveryChart.series" [chart]="outdeliveryChart.chart" [dataLabels]="outdeliveryChart.dataLabels"
+                [stroke]="outdeliveryChart.stroke" [fill]="outdeliveryChart.fill" [colors]="outdeliveryChart.colors"
+                [labels]="outdeliveryChart.labels" [markers]="outdeliveryChart.markers" [yaxis]="outdeliveryChart.yaxis"
+                [xaxis]="outdeliveryChart.xaxis" [plotOptions]="outdeliveryChart.plotOptions" [title]="outdeliveryChart.title" [subtitle]="outdeliveryChart.subtitle">
+          </apx-chart>
+        </div>
+        <div id="progress5">
+            <apx-chart [series]="deliveredChart.series" [chart]="deliveredChart.chart" [dataLabels]="deliveredChart.dataLabels"
+                [stroke]="deliveredChart.stroke" [fill]="deliveredChart.fill" [colors]="deliveredChart.colors"
+                [labels]="deliveredChart.labels" [markers]="deliveredChart.markers" [yaxis]="deliveredChart.yaxis"
+                [xaxis]="deliveredChart.xaxis" [plotOptions]="deliveredChart.plotOptions" [title]="deliveredChart.title" [subtitle]="deliveredChart.subtitle">
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>

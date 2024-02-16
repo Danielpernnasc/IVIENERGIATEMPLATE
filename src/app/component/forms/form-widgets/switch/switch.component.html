@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <app-custom-switch></app-custom-switch>
+        </div>
+        <div class="col-xl-4 col-sm-6">
+            <ng-container *ngFor="let data of IconSwitchButton">
+                <app-common-switch-button [data]="data"></app-common-switch-button>
+            </ng-container>
+        </div>
+        <div class="col-xl-4 col-sm-6">
+            <ng-container *ngFor="let data of uncheckedSwitchButton">
+                <app-common-switch-button [data]="data"></app-common-switch-button>
+            </ng-container>
+        </div>
+        <div class="col-xl-4">
+            <ng-container *ngFor="let data of borderedIconButton">
+                <app-common-switch-button [data]="data"></app-common-switch-button>
+            </ng-container>
+        </div>
+        <div class="col-md-6">
+            <app-disable-outline></app-disable-outline>
+        </div>
+        <div class="col-md-6">
+            <app-variation-of-switches></app-variation-of-switches>
+        </div>
+        <div class="col-md-12">
+            <app-switch-sizing></app-switch-sizing>
+        </div>
+        <div class="col-md-12">
+            <app-switch-with-icon></app-switch-with-icon>
+        </div>
+    </div>
+</div>

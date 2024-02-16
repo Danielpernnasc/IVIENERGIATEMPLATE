@@ -1,0 +1,18 @@
+<div class="card height-equal">
+    <div class="card-header card-no-border pb-0">
+        <h3>Horizontal Lists</h3>
+        <p class="f-m-light mt-1">Use <code>.list-group-horizontal</code>to change the layout of list group items from vertical to horizontal across all breakpoints.<code>.list-group-horizontal-[sm/md/lg/xl/xxl]</code>.</p>
+    </div>
+    <div class="card-body">
+        <div class="horizontal-list-wrapper dark-list">
+            <ul class="fw-bold list-group list-group-horizontal-sm pb-2" *ngFor="let allData of horizontialListData">
+                <ng-container *ngFor="let data of allData.data">
+                    <li  class="list-group-item border-left-{{allData.borderColor}}" *ngIf="data.border; else other">{{ data.item }} </li>
+                    <ng-template #other>
+                        <li class="list-group-item"  >{{ data.item }} </li>
+                    </ng-template>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>

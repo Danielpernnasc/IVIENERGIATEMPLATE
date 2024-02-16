@@ -1,0 +1,50 @@
+<div class="row g-sm-3 height-equal-2 widget-charts">
+    <div class="col-sm-6" *ngFor="let details of allDetails"> 
+      <div class="card small-widget mb-sm-0">
+        <div class="card-body {{ details.color }}"> <span class="f-light">{{ details.title }}</span>
+          <div class="d-flex align-items-end gap-1">
+            <h4>{{ details.text }}</h4><span class="font-{{ details.color }} f-14 f-w-600"><i class="{{ details.tradingIcon }}"></i><span>{{ details.pr}}%</span></span>
+          </div>
+          <div class="bg-gradient">
+            <svg-icon src="{{ details.icon }}"></svg-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6"> 
+      <div class="card widget-1 widget-with-chart mb-xl-0">
+        <div class="card-body"> 
+          <div> 
+            <h4 class="mb-1">1,80k</h4><span class="f-light">Orders</span>
+          </div>
+          <div class="order-chart"> 
+            <div id="orderchart">
+                <apx-chart [series]="orderChart.series" [chart]="orderChart.chart" [dataLabels]="orderChart.dataLabels"
+                [stroke]="orderChart.stroke" [fill]="orderChart.fill" [colors]="orderChart.colors"
+                [labels]="orderChart.labels" [markers]="orderChart.markers" [yaxis]="orderChart.yaxis"
+                [xaxis]="orderChart.xaxis" [plotOptions]="orderChart.plotOptions" [grid]="orderChart.grid" [tooltip]="orderChart.tooltip" [legend]="orderChart.legend">
+          </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6"> 
+      <div class="card widget-1 widget-with-chart mb-xl-0">
+        <div class="card-body"> 
+          <div> 
+            <h4 class="mb-1">6,90k</h4><span class="f-light">Profit</span>
+          </div>
+          <div class="profit-chart"> 
+            <div id="profitchart">
+                <apx-chart [series]="profitChart.series" [chart]="profitChart.chart" [dataLabels]="profitChart.dataLabels"
+                [stroke]="profitChart.stroke" [fill]="profitChart.fill" [colors]="profitChart.colors"
+                [labels]="profitChart.labels" [markers]="profitChart.markers" [yaxis]="profitChart.yaxis"
+                [xaxis]="profitChart.xaxis" [plotOptions]="profitChart.plotOptions" [grid]="profitChart.grid">
+          </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

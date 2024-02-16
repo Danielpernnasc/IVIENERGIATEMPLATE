@@ -1,0 +1,296 @@
+<!-- <div class="row Mobile">
+  <div class="col-sm-12">
+    <div class="card-header card-no-border pb-0">
+      <h4>{{titleForm.tiluloSH6[0]}}</h4>
+  </div>
+    <div class="card">
+   
+      <div class="card-header card-no-border pb-0">
+        <ul>
+          <li>Pre-project duplicity (10)</li>
+          <li>Pending Project Validation (2)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-header card-no-border pb-0">
+      <h4>{{titleForm.tiluloSH6[1]}}</h4>
+  </div>
+    <div class="card">
+      <div class="w-100"></div>
+      <div class="card-header card-no-border pb-0">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card-header card-no-border pb-0">
+      <h4>{{titleForm.tiluloSH6[2]}}</h4>
+    </div>
+    <div class="card">
+      <div class="card-header card-no-border pb-0">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="w-100"></div>
+  <div class="col-sm-12">
+    <div class="card-header card-no-border pb-0">
+        <h4>{{titleForm.tiluloSH6[3]}}</h4>
+    </div>
+    <div class="card">
+        <div class="card-body">
+          <form [formGroup]="formularioPreCadastro" #f="ngForm" class="needs-validation"  >
+              <div class="row g-3">
+                <div class="col-md-4 position-relative">
+                  <label class="form-label" for="validationTooltip01">{{titleForm.spansForm[0]}}<span>*</span></label>
+                  <input class="form-control"  disabled>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="validationCustom02">{{titleForm.spansForm[1]}}<span>*</span></label>
+                  <input class="form-control" id="validationCustom02" type="text" disabled>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label class="form-label" for="validationCustom02">{{titleForm.spansForm[2]}}<span>*</span></label>
+                  <input class="form-control" id="validationCustom02" type="text" disabled>
+                  <div class="valid-feedback">Looks good!</div>
+                  </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-4 position-relative">
+                  <label class="form-label" for="validationTooltip01">{{titleForm.spansForm[3]}}<span>*</span></label>
+                  <input class="form-control" id="validationCustom01" type="text"  required="" onlyAlphabets>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="validationCustom02">{{titleForm.spansForm[4]}}<span>*</span></label>
+                  <select class="form-select" id="Developer" formControlName="Developer" required="">
+                    <option  value="">Select...</option>
+                    <option *ngFor="let desenvolvedor of developer" value="">{{desenvolvedor}}</option>
+                  </select>
+                  <div class="invalid-tooltip">
+                    Please select a valid Developer.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label class="form-label" for="validationCustom02">{{titleForm.spansForm[5]}}<span>*</span></label>
+                  <input class="form-control" id="validationCustom02" type="text"  required="" onlyAlphabets>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-4 position-relative">
+                  <label class="form-label" for="validationTooltip01">{{titleForm.spansForm[6]}}<span>*</span></label>
+                  <select class="form-select" id="state" formControlName="state" required="" (change)="onStateChange()">
+                    <option  value="">Select...</option>
+                    <option *ngFor="let estado of State" [value]="estado.id">{{estado.name}}</option>
+                  </select>
+                  <div class="invalid-tooltip">
+                    Please select a valid State.
+                  </div>
+                </div>
+              
+                <div class="col-md-4">
+                  <label class="form-label" formControlName="city" id="city">{{titleForm.spansForm[7]}}<span>*</span></label>
+                  <select class="form-select" id="validationCustom04" required="">
+                  
+                    <option  value="">Select...</option>
+                    <option *ngFor="let cidades of NovasCidades">{{cidades.name}}</option>
+                  </select>
+                  <div class="invalid-tooltip">
+                    Please select a valid City.
+                  </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label class="form-label" for="validationCustom02">{{titleForm.spansForm[8]}}<span>*</span></label>
+                  <select class="form-select" id="validationCustom04" required="">
+                    <option  value="">Select...</option>
+                    <option *ngFor="let utilidade of utilitys">{{utilidade}}</option>
+                  
+                  </select>
+                  <div class="invalid-tooltip">
+                    Please select a valid State.
+                  </div>
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-4 position-relative">
+                  <label class="form-label" for="validationTooltip01">{{titleForm.spansForm[9]}} <span>*</span></label>
+                  <input class="form-control" id="validationCustom01" type="number"  min="0" >
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="validationCustom02">{{titleForm.spansForm[10]}}<span>*</span></label>
+                  <input class="form-control" id="validationCustom01" type="text"  min="0" disabled>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label class="form-label" for="validationCustom02">{{titleForm.spansForm[11]}}<span>*</span></label>
+                  <div class="card-wrapper border rounded-3 checkbox-checked">
+                    <div class="form-check">
+                      <input class="form-check-input" id="flexRadioDefault1" type="radio" name="flexRadioDefault">
+                      <label class="form-check-label" for="flexRadioDefault1">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" id="flexRadioDefault2" type="radio" name="flexRadioDefault" checked="">
+                      <label class="form-check-label" for="flexRadioDefault2">No</label>
+                    </div>
+                  </div>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+              </div>
+            <button class="btn_PreCadastro btn" [disabled]="!formularioPreCadastro.valid" type="submit" >Save</button>
+          </form>
+        </div>
+    </div>
+  </div>
+</div> -->
+<div class="row Desktop">
+  <div class="row">
+    <!-- <app-basic-modal></app-basic-modal> -->
+    <div class="col-8 col-lg-3">
+      <app-tasks></app-tasks>
+    </div> 
+    <div class="col-8 col-lg-9">
+      <div class="card-body">
+        <div class="card-header card-no-border pb-0">
+        </div>
+        <app-loading *ngIf="isLoading">{{isLoading}}</app-loading>
+        <form [formGroup]="formularioPreCadastro" (ngSubmit)="salvarDados()" class="needs-validation" [ngClass]="{'was-validated': validate}"  >
+            <!-- <div class="row g-3">
+              <div class="col-md-4 position-relative">
+                <label class="form-label" for="validationTooltip01">{{titleForm.spansForm[0]}}<span>*</span></label>
+                <input class="form-control"  disabled>
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="validationCustom02">{{titleForm.spansForm[1]}}<span>*</span></label>
+                <input class="form-control" id="validationCustom02" disabled>
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label" for="validationCustom02">{{titleForm.spansForm[2]}}<span>*</span></label>
+                <input class="form-control" id="validationCustom02" type="text" disabled>
+                <div class="valid-feedback">Looks good!</div>
+                </div>
+            </div> -->
+            <div class="row g-3">
+              <div class="col-md-4 position-relative">
+                <label class="form-label" for="validationTooltip01">{{titleForm.spansForm[3]}}<span>*</span></label>
+                <input class="form-control" id="NameProjectDevelop" formControlName="NameProjectDevelop" type="text"  required="" onlyAlphabets>
+                <div *ngIf="formularioPreCadastro.get('NameProjectDevelop').invalid && (formularioPreCadastro.get('NameProjectDevelop').dirty || formularioPreCadastro.get('NameProjectDevelop').touched)">
+                  O campo é obrigatório.
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="validationCustom02">{{titleForm.spansForm[4]}}<span>*</span></label>
+                <select class="form-select" id="DeveloperId" formControlName="DeveloperId" required="">
+                  <option  value="">Select...</option>
+                  <option *ngFor="let desenvolvedor of developer" [value]="desenvolvedor.id">{{desenvolvedor.name}}</option>
+                </select>
+                <div class="invalid-tooltip">
+                    Selecione o desenvolvedor.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label" for="validationCustom02">{{titleForm.spansForm[5]}}<span>*</span></label>
+                <input class="form-control" id="ProjetoReferencia" formControlName="ProjetoReferencia" type="text"  required="" onlyAlphabets>
+                <div *ngIf="formularioPreCadastro.get('ProjetoReferencia').invalid && (formularioPreCadastro.get('ProjetoReferencia').dirty || formularioPreCadastro.get('ProjetoReferencia').touched)">
+                  O campo é obrigatório.
+                </div>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4 position-relative">
+                <label class="form-label" for="validationTooltip01">{{titleForm.spansForm[6]}}<span>*</span></label>
+                <select class="form-select" required="" name="state" formControlName="state" (change)="onStateChange()">
+                  <option >Select...</option>
+                  <option *ngFor="let estado of State" [value]="estado.id">{{estado.name}}</option>
+                </select>
+                <div class="invalid-tooltip">
+                  Selecione o Estado.
+                </div>
+              </div>
+            
+              <div class="col-md-4">
+                <label class="form-label" >{{titleForm.spansForm[7]}}<span>*</span></label>
+                  <select class="form-select" id="CityId" required="" formControlName="CityId" [disabled]="!formularioPreCadastro.get('state').value">
+                    <option >Select...</option>
+                    <option *ngFor="let cidade of NewCities" [value]="cidade.id">{{cidade.name}}</option>
+                  </select>
+              
+                <div class="invalid-tooltip">
+                  Selecione a cidade.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label"  >{{titleForm.spansForm[8]}}<span>*</span></label>
+
+                <select class="form-select" id="UtilityId" required="" formControlName="UtilityId" [disabled]="!formularioPreCadastro.get('state').value" >
+                  <option >Select...</option>
+                  <option *ngFor="let utilidade of Distribuidora" [value]="utilidade.id">{{utilidade.name}}</option>
+                </select>
+                <div class="invalid-tooltip">
+                 Selecione a Distribuidora.
+                </div>
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-md-4 position-relative">
+                <label class="form-label" for="validationTooltip01">{{titleForm.spansForm[9]}} <span>*</span></label>
+                <input class="form-control" id="NumberCapacityKwac" formControlName="NumberCapacityKwac" type="number"  min="500" required="" >
+                <div *ngIf="formularioPreCadastro.get('NumberCapacityKwac').invalid && (formularioPreCadastro.get('NumberCapacityKwac').dirty || formularioPreCadastro.get('NumberCapacityKwac').touched)">
+                  <div *ngIf="formularioPreCadastro.get('NumberCapacityKwac').hasError('required')">
+                    O campo é obrigatório.
+                  </div>
+                  <div *ngIf="formularioPreCadastro.get('NumberCapacityKwac').hasError('min')">
+                    O valor mínimo permitido é 500.
+                  </div>
+                  <div *ngIf="formularioPreCadastro.get('NumberCapacityKwac').hasError('max')">
+                    O valor máximo permitido é 5000.
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label" for="validationCustom02">{{titleForm.spansForm[10]}}<span>*</span></label>
+                <input class="form-control" id="validationCustom01" type="text"  min="0" disabled>
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label" for="validationCustom02">{{titleForm.spansForm[11]}}<span>*</span></label>
+                <div class="card-wrapper border rounded-3 checkbox-checked">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" [checked]="formularioPreCadastro.get('IsAccessOpinion').value === true" (change)="formularioPreCadastro.patchValue({ IsAccessOpinion: true })" required="">
+                    <label class="form-check-label" for="flexRadioDefault1" required="">Yes</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" [checked]="formularioPreCadastro.get('IsAccessOpinion').value === false" (change)="formularioPreCadastro.patchValue({ IsAccessOpinion: false })" required="">
+                    <label class="form-check-label" for="flexRadioDefault2" required="">No</label>
+                  </div>
+                  
+                </div>
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+            </div>
+          <button class="btn_PreCadastro btn"  type="submit" [disabled]="loading">
+            {{loading ? 'Salvando...' : 'Salvar'}}
+          </button>
+          <mat-progress-spinner *ngIf="loading" mode="indeterminate"></mat-progress-spinner>
+   
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

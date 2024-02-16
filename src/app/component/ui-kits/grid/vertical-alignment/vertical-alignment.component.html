@@ -1,0 +1,35 @@
+<div class="card">
+    <div class="card-header card-no-border pb-0">
+        <h3>Vertical Alignment</h3>
+        <p class="mt-1 f-m-light">You can use the <code>align-items-*</code> class
+            to set the Vertical alignment.
+        </p>
+    </div>
+    <div class="card-body grid-showcase mb-0">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let allData of verticalAlignmentData">
+                <div class="row grid-vertical align-items-{{ allData.class }} m-1 g-2 bg-light">
+                    <div class="col-6" *ngFor="let data of allData.data">
+                        <span class="bg-white">{{ data.text }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div class="table-responsive theme-scrollbar">
+          <table class="w-100">
+            <tbody>
+              <tr>
+                <th> Class</th>
+                <th class="f-w-800">Value of the class</th>
+              </tr>
+              <tr>
+                <td><code>.align-items-*</code></td>
+                <td> start / center / end / baseline / stretch</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>

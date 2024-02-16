@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-header card-no-border pb-0">
+        <h3>Image Preview </h3>
+        <p class="f-m-light mt-1">We use the create method to turn a<code> &lt;input type="file"&gt;</code> into a FilePond drop area.<code>[https://pqina.nl/filepond/]</code></p>
+    </div>
+    <div class="card-body">
+        <div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onSelect($event)">
+            <ngx-dropzone-label>
+                <ngx-dropzone-label>Drag & Drop your files or Browse</ngx-dropzone-label>
+            </ngx-dropzone-label>
+            <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
+                <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+            </ngx-dropzone-image-preview>
+        </div>
+    </div>
+</div>
